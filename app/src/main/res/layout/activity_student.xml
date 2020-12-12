@@ -1,9 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".StudentActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/mainStudentHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="Welcome Student"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="35sp"
+            android:fontFamily="@font/bariol_bold"/>
+
+        <EditText
+            android:id="@+id/mainName"
+            android:layout_below="@+id/mainStudentHead"
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:layout_height="40dp"
+            android:hint="Enter Name"/>
+
+        <EditText
+            android:id="@+id/mainRollNo"
+            android:layout_below="@+id/mainName"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:layout_height="40dp"
+            android:hint="Enter Roll no"/>
+
+        <EditText
+            android:id="@+id/mainDept"
+            android:layout_below="@+id/mainRollNo"
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:layout_height="40dp"
+            android:hint="Enter Dept"/>
+
+        <EditText
+            android:id="@+id/mainYear"
+            android:layout_below="@+id/mainDept"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:layout_height="40dp"
+            android:hint="Enter Year"/>
+
+        <TextView
+            android:id="@+id/InHead"
+            android:layout_below="@+id/mainYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="In Time"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="35sp"
+            android:fontFamily="@font/bariol_bold"/>
+
+        <TextView
+            android:id="@+id/OutHead"
+            android:layout_below="@+id/InHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="Out Time"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="35sp"
+            android:fontFamily="@font/bariol_bold"/>
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/OutHead"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:text="@string/mainSubmit"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/design_default_color_primary"
+            android:layout_marginTop="20dp"
+            />
+    </RelativeLayout>

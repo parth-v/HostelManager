@@ -1,9 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AdminActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/adminMainHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Welcome Admin"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="35sp"
+        android:fontFamily="@font/bariol_bold"/>
+
+    <TextView
+        android:id="@+id/adminSubHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/adminMainHeader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Admin can manage the student as well as staff details!"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="25sp"
+        android:fontFamily="@font/bariol_bold"/>
+
+    <Button
+        android:id="@+id/mainStaffButton"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/adminSubHead"
+        android:layout_height="wrap_content"
+        android:text="Staff"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="100dp"
+        />
+
+    <Button
+        android:id="@+id/mainStudentButton"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/mainStaffButton"
+        android:layout_height="wrap_content"
+        android:text="Student"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="55dp"
+        />
+
+</RelativeLayout>

@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".StaffActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/mainStudentHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="Welcome Staff"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="35sp"
+        android:fontFamily="@font/bariol_bold"/>
+
+    <EditText
+        android:id="@+id/mainSfName"
+        android:layout_below="@+id/mainStudentHead"
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:layout_height="40dp"
+        android:hint="Enter Name"/>
+
+    <EditText
+        android:id="@+id/mainSfRollNo"
+        android:layout_below="@+id/mainSfName"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:layout_height="40dp"
+        android:hint="Enter ID"/>
+
+    <EditText
+        android:id="@+id/mainSfDept"
+        android:layout_below="@+id/mainSfRollNo"
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:layout_height="40dp"
+        android:hint="Enter Dept"/>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/mainSfDept"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:text="@string/mainSubmit"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/design_default_color_primary"
+        android:layout_marginTop="20dp"
+        />
+</RelativeLayout>
