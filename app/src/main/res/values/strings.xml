@@ -3,4 +3,7 @@
     <string name="mainAppHeader">Hostel Manager</string>
     <string name="mainLoginButtonText">Login</string>
     <string name="mainSubHeader">This app lets admin, staff and students connect and provides various hostel management functionalities for convenience</string>
+    <string name="mainLoginHeader">Login Screen</string>
+    <string name="mainPasswordHint">Enter password</string>
+    <string name="mainEmailHint">Enter email</string>
 </resources>

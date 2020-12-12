@@ -4,48 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
     <TextView
-        android:id="@+id/mainHeader"
+        android:id="@+id/mainLoginHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
+        android:layout_margin="30dp"
         android:gravity="center"
-        android:text="@string/mainAppHeader"
-        android:textColor="@color/design_default_color_primary"
-        android:textSize="55sp"
-        android:fontFamily="@font/bariol_bold"/>
-
-
-    <TextView
-        android:id="@+id/mainSubHeader"
-        android:layout_below="@id/mainHeader"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:layout_marginHorizontal="5dp"
-        android:gravity="center"
-        android:text="@string/mainSubHeader"
+        android:text="@string/mainLoginHeader"
         android:textColor="@color/design_default_color_primary"
         android:textSize="45sp"
         android:fontFamily="@font/bariol_bold"/>
 
+    <EditText
+        android:id="@+id/mainEmail"
+        android:layout_below="@+id/mainLoginHeader"
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_margin="25dp"
+        android:layout_height="40dp"
+        android:maxLines="1"
+        android:hint="@string/mainEmailHint"/>
+
+    <EditText
+        android:id="@+id/mainPassword"
+        android:layout_below="@+id/mainEmail"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_margin="25dp"
+        android:layout_height="40dp"
+        android:maxLines="1"
+        android:hint="@string/mainPasswordHint"/>
+
     <Button
         android:id="@+id/mainLoginButton"
         android:layout_width="wrap_content"
-        android:layout_below="@+id/mainSubHeader"
+        android:layout_below="@+id/mainPassword"
         android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:text="@string/mainLoginButtonText"
         android:textAllCaps="false"
-        android:textSize="40sp"
-        android:onClick="onClickLogin"
+        android:textSize="30sp"
         android:textColor="@color/white"
+        android:onClick="onClickLogin"
         app:backgroundTint="@color/design_default_color_primary"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         />
 
 </RelativeLayout>
