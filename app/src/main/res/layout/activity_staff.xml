@@ -52,6 +52,7 @@
         android:text="@string/mainSubmit"
         android:textAllCaps="false"
         android:textSize="20sp"
+        android:onClick="onSubmit"
         android:textColor="@color/white"
         app:backgroundTint="@color/design_default_color_primary"
         android:layout_marginTop="20dp"
