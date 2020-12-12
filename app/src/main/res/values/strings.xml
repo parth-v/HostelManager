@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">HostelManager</string>
+    <string name="app_name">Hostel Manager</string>
+    <string name="mainAppHeader">Hostel Manager</string>
+    <string name="mainLoginButtonText">Login</string>
+    <string name="mainSubHeader">This app lets admin, staff and students connect and provides various hostel management functionalities for convenience</string>
 </resources>
