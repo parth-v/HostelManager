@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentDetails">
+
+    <TextView
+        android:id="@+id/stDetHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="50dp"
+        android:gravity="center"
+        android:text="Student Details"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="35sp"
+        android:fontFamily="@font/bariol_bold"/>
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stDetHead"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="25sp"
+        android:fontFamily="@font/bariol_bold"/>
+
+    <TextView
+        android:id="@+id/RollNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Name"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:text=""
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="25sp"
+        android:fontFamily="@font/bariol_bold"/>
+
+    <TextView
+        android:id="@+id/Dept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RollNo"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:text=""
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="25sp"
+        android:fontFamily="@font/bariol_bold"/>
+
+    <TextView
+        android:id="@+id/Year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Dept"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:text=""
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="25sp"
+        android:fontFamily="@font/bariol_bold"/>
+
+    <TextView
+        android:id="@+id/inTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Year"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:text=""
+        android:gravity="center"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="25sp"
+        android:fontFamily="@font/bariol_bold"/>
+
+    <TextView
+        android:id="@+id/outTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inTime"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:text=""
+        android:gravity="center"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="25sp"
+        android:fontFamily="@font/bariol_bold"/>
+
+    <Button
+        android:id="@+id/mainStaffButton"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/outTime"
+        android:layout_height="wrap_content"
+        android:text="Edit Details"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="50dp"
+        />
+
+</RelativeLayout>
