@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -65,9 +66,17 @@
             android:textSize="35sp"
             android:fontFamily="@font/bariol_bold"/>
 
+        <TimePicker
+            android:id="@+id/timePicker1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/InHead"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
         <TextView
             android:id="@+id/OutHead"
-            android:layout_below="@+id/InHead"
+            android:layout_below="@+id/timePicker1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -78,10 +87,18 @@
             android:textSize="35sp"
             android:fontFamily="@font/bariol_bold"/>
 
+        <TimePicker
+            android:id="@+id/timePicker2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/OutHead"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
         <Button
             android:id="@+id/submitButton"
             android:layout_width="wrap_content"
-            android:layout_below="@+id/OutHead"
+            android:layout_below="@+id/timePicker2"
             android:layout_centerHorizontal="true"
             android:layout_height="wrap_content"
             android:text="@string/mainSubmit"
