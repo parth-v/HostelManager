@@ -15,10 +15,12 @@ public class AdminActivity extends AppCompatActivity {
     }
 
     public void clickStudent(View view) {
-        //Open Student Details Section
+        Intent intent = new Intent(this, StudentDetails.class);
+        startActivity(intent);
     }
 
     public void clickStaff(View view) {
-       //Open Staff Details Section
+        Intent intent = new Intent(this, StaffDetails.class);
+        startActivity(intent);
     }
 }
