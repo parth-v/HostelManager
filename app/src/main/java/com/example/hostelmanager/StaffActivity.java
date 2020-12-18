@@ -2,6 +2,7 @@ package com.example.hostelmanager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -9,11 +10,22 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class StaffActivity extends AppCompatActivity {
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final String Name = "SfnameK";
+    public static final String Roll = "SfrollK";
+    public static final String Dept = "SfdeptK";
     EditText nameT, rollT, deptT;
+
+    SharedPreferences sharedpreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staff);
+        nameT = (EditText) findViewById(R.id.mainSfName);
+        rollT = (EditText) findViewById(R.id.mainSfRollNo);
+        deptT = (EditText) findViewById(R.id.mainSfDept);
+
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
     }
 
     public void onSubmit(View view) {
@@ -26,6 +38,13 @@ public class StaffActivity extends AppCompatActivity {
             Toast.makeText(this, "Please provide all the details!", Toast.LENGTH_LONG).show();
             return;
         }
+
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+
+        editor.putString(Name, name);
+        editor.putString(Roll, roll);
+        editor.putString(Dept, dept);
+        editor.commit();
 
         String data = "New Staff Added\nName: " + name + "\nID: " + roll + "\nDept: " + dept;
         Toast.makeText(this, data, Toast.LENGTH_LONG).show();
