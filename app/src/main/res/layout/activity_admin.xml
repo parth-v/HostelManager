@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light"
     tools:context=".AdminActivity">
 
     <TextView
@@ -42,21 +44,23 @@
         android:textAllCaps="false"
         android:textSize="20sp"
         android:textColor="@color/white"
+        android:background="@drawable/custom_button"
+        android:padding="20dp"
         android:layout_marginTop="100dp"
         />
 
     <Button
         android:id="@+id/mainStudentButton"
         android:layout_width="wrap_content"
-        android:layout_below="@+id/mainStaffButton"
         android:layout_height="wrap_content"
-        android:text="Student"
-        android:onClick="clickStudent"
+        android:layout_below="@+id/mainStaffButton"
         android:layout_centerHorizontal="true"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        android:textColor="@color/white"
         android:layout_marginTop="55dp"
-        />
+        android:background="@drawable/custom_button"
+        android:onClick="clickStudent"
+        android:padding="20dp"
+        android:text="Student"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
 
 </RelativeLayout>

@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light"
     tools:context=".LoginActivity">
 
     <TextView
@@ -62,7 +63,8 @@
         android:textSize="25sp"
         android:textColor="@color/white"
         android:onClick="onClickLogin"
-        app:backgroundTint="@color/design_default_color_primary"
+        android:background="@drawable/custom_button"
+        android:padding="20dp"
         android:layout_marginTop="20dp"
         />
 
