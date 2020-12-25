@@ -17,10 +17,14 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onClickLogin(View view) {
+
+        //Check Login Details for valid input
         EditText editEmail = (EditText) findViewById(R.id.mainEmail);
         EditText editPassword = (EditText) findViewById(R.id.mainPassword);
         String email = editEmail.getText().toString();
         String password = editPassword.getText().toString();
+
+        //Open admin/staff/student screen as per the credentials
         if(email.equals("admin@gmail.com") && password.equals("admin")) {
             openAdminActivity();
         }

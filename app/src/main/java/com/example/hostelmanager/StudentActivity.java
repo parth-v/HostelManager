@@ -14,7 +14,7 @@ import android.widget.Toast;
 import java.util.Calendar;
 
 public class StudentActivity extends AppCompatActivity {
-
+    //Shared pref used for storing student details
     public static final String MyPREFERENCES = "MyPrefs" ;
     public static final String Name = "SnnameK";
     public static final String Roll = "SnrollK";
@@ -48,9 +48,35 @@ public class StudentActivity extends AppCompatActivity {
         int hour2 = calendar2.get(Calendar.HOUR_OF_DAY);
         int min2 = calendar2.get(Calendar.MINUTE);
 
-        //Time function
+        showTime(hour1, min1);
 
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+    }
+
+    public void setTime(View view) {
+        int hour = timePicker1.getCurrentHour();
+        int min = timePicker1.getCurrentMinute();
+        showTime(hour, min);
+    }
+
+    public void showTime(int hour, int min) {
+        if (hour == 0) {
+            hour += 12;
+            format1 = "AM";
+        } else if (hour == 12) {
+            format1 = "PM";
+        } else if (hour > 12) {
+            hour -= 12;
+            format1 = "PM";
+        } else {
+            format1 = "AM";
+        }
+
+        time1.setText(new StringBuilder().append(hour).append(" : ").append(min)
+                .append(" ").append(format1));
+
+        time2.setText(new StringBuilder().append(hour).append(" : ").append(min)
+                .append(" ").append(format2));
     }
 
     public void onSubmit(View view) {
@@ -67,7 +93,7 @@ public class StudentActivity extends AppCompatActivity {
         }
 
         SharedPreferences.Editor editor = sharedpreferences.edit();
-
+        //Commit the student details to the shared pref using editor
         editor.putString(Name, name);
         editor.putString(Roll, roll);
         editor.putString(Dept, dept);
@@ -76,6 +102,7 @@ public class StudentActivity extends AppCompatActivity {
         editor.putString(outTime, outTimeV);
         editor.commit();
 
+        //Display the user feedback on successful submission of details
         String data = "New Student Added\nName: " + name + "\nID: " + roll + "\nDept: " + dept +"\nYear: " + year;
         Toast.makeText(this, data, Toast.LENGTH_LONG).show();
     }

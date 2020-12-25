@@ -1,6 +1,7 @@
 package com.example.hostelmanager;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -24,5 +25,7 @@ public class StaffDetails extends AppCompatActivity {
 
     public void EditDetails(View view) {
         //open edit screen
+        Intent intent = new Intent(this, EditDetailsActivity.class);
+        startActivity(intent);
     }
 }
