@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -38,12 +37,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginHorizontal="5dp"
         android:gravity="center"
         android:text="@string/mainSubHeader"
         android:textColor="@color/design_default_color_primary"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:fontFamily="@font/bariol_bold"/>
 
     <Button
@@ -54,11 +53,10 @@
         android:layout_height="wrap_content"
         android:text="@string/mainLoginButtonText"
         android:textAllCaps="false"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:onClick="onClickLogin"
         android:textColor="@color/white"
-        android:background="@drawable/custom_button"
-        android:padding="20dp"
+        android:padding="10dp"
         android:layout_marginTop="40dp"
         />
 

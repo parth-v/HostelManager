@@ -12,6 +12,9 @@
         <activity android:name=".EditDetailsActivity"></activity>
         <activity android:name=".StaffActivity" />
         <activity android:name=".StudentActivity" />
+        <activity android:name=".StudentDetails" />
+        <activity android:name=".StaffDetails" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".AdminActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

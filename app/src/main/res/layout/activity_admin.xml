@@ -36,18 +36,17 @@
     <Button
         android:id="@+id/mainStaffButton"
         android:layout_width="wrap_content"
-        android:layout_below="@+id/adminSubHead"
         android:layout_height="wrap_content"
-        android:text="Staff"
-        android:onClick="clickStaff"
+        android:layout_below="@+id/adminSubHead"
         android:layout_centerHorizontal="true"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        android:background="@drawable/custom_button"
-        android:padding="20dp"
         android:layout_marginTop="100dp"
-        />
+        android:background="@drawable/custom_button"
+        android:onClick="clickStaff"
+        android:padding="20dp"
+        android:text="Staff"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/mainStudentButton"

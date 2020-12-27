@@ -48,7 +48,7 @@ public class StudentActivity extends AppCompatActivity {
         int hour2 = calendar2.get(Calendar.HOUR_OF_DAY);
         int min2 = calendar2.get(Calendar.MINUTE);
 
-        showTime(hour1, min1);
+        //showTime(hour1, min1);
 
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
     }
@@ -92,15 +92,15 @@ public class StudentActivity extends AppCompatActivity {
             return;
         }
 
-        SharedPreferences.Editor editor = sharedpreferences.edit();
-        //Commit the student details to the shared pref using editor
-        editor.putString(Name, name);
-        editor.putString(Roll, roll);
-        editor.putString(Dept, dept);
-        editor.putString(Year, name);
-        editor.putString(inTime, inTimeV);
-        editor.putString(outTime, outTimeV);
-        editor.commit();
+//        SharedPreferences.Editor editor = sharedpreferences.edit();
+//        //Commit the student details to the shared pref using editor
+//        editor.putString(Name, name);
+//        editor.putString(Roll, roll);
+//        editor.putString(Dept, dept);
+//        editor.putString(Year, name);
+//        editor.putString(inTime, inTimeV);
+//        editor.putString(outTime, outTimeV);
+//        editor.commit();
 
         //Display the user feedback on successful submission of details
         String data = "New Student Added\nName: " + name + "\nID: " + roll + "\nDept: " + dept +"\nYear: " + year;
