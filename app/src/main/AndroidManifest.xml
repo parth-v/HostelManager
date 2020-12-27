@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HostelManager">
-        <activity android:name=".EditDetailsActivity"></activity>
+        <activity android:name=".EditDetailsActivity"/>
         <activity android:name=".StaffActivity" />
         <activity android:name=".StudentActivity" />
         <activity android:name=".StudentDetails" />

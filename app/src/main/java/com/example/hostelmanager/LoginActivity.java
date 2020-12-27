@@ -25,14 +25,14 @@ public class LoginActivity extends AppCompatActivity {
         String password = editPassword.getText().toString();
 
         //Open admin/staff/student screen as per the credentials
-        if(email.equals("a") && password.equals("a")) {
+        if(email.equals("admin@gmail.com") && password.equals("admin")) {
             openAdminActivity();
         }
-        else if(email.equals("sf") && password.equals("sf")){
+        else if(email.equals("staff") && password.equals("staff")){
             openStaffActivity();
         }
 
-        else if(email.equals("st") && password.equals("st")){
+        else if(email.equals("student@gmail.com") && password.equals("student")){
             openStudentActivity();
         }
         else {
