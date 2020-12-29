@@ -17,7 +17,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onClickLogin(View view) {
-
         //Check Login Details for valid input
         EditText editEmail = (EditText) findViewById(R.id.mainEmail);
         EditText editPassword = (EditText) findViewById(R.id.mainPassword);
@@ -28,10 +27,9 @@ public class LoginActivity extends AppCompatActivity {
         if(email.equals("admin@gmail.com") && password.equals("admin")) {
             openAdminActivity();
         }
-        else if(email.equals("staff") && password.equals("staff")){
+        else if(email.equals("staff@gmail.com") && password.equals("staff")){
             openStaffActivity();
         }
-
         else if(email.equals("student@gmail.com") && password.equals("student")){
             openStudentActivity();
         }

@@ -14,6 +14,7 @@ import android.widget.Toast;
 import java.util.Calendar;
 
 public class StudentActivity extends AppCompatActivity {
+
     //Shared pref used for storing student details
     public static final String MyPREFERENCES = "MyPrefs" ;
     public static final String Name = "SnnameK";
@@ -100,7 +101,7 @@ public class StudentActivity extends AppCompatActivity {
         editor.putString(Year, name);
         editor.putString(inTime, inTimeV);
         editor.putString(outTime, outTimeV);
-        editor.commit();
+        editor.apply();
 
         //Display the user feedback on successful submission of details
         String data = "New Student Added\nName: " + name + "\nID: " + roll + "\nDept: " + dept +"\nYear: " + year;

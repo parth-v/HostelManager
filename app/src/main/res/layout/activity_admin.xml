@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:gravity="center"
-        android:text="Welcome Admin"
+        android:text="@string/admin_header"
         android:textColor="@color/design_default_color_primary"
         android:textSize="35sp"
         android:fontFamily="@font/bariol_bold"/>
@@ -28,7 +28,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:gravity="center"
-        android:text="Admin can manage the student as well as staff details!"
+        android:text="@string/admin_sub_header"
         android:textColor="@color/design_default_color_primary"
         android:textSize="25sp"
         android:fontFamily="@font/bariol_bold"/>
@@ -43,7 +43,7 @@
         android:background="@drawable/custom_button"
         android:onClick="clickStaff"
         android:padding="15dp"
-        android:text="Staff"
+        android:text="@string/admin_staff"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp" />
@@ -58,7 +58,7 @@
         android:background="@drawable/custom_button"
         android:onClick="clickStudent"
         android:padding="15dp"
-        android:text="Student"
+        android:text="@string/admin_student"
         android:textColor="@color/white"
         android:textAllCaps="false"
         android:textSize="20sp" />

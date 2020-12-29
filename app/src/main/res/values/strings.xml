@@ -7,4 +7,23 @@
     <string name="mainPasswordHint">Enter password</string>
     <string name="mainEmailHint">Enter email</string>
     <string name="mainSubmit">Submit</string>
+    <string name="admin_header">Welcome Admin</string>
+    <string name="admin_sub_header">Admin can manage the student as well as staff details!</string>
+    <string name="admin_staff">Staff</string>
+    <string name="admin_student">Student</string>
+    <string name="mainEditHeader">Edit Details</string>
+    <string name="login_logo_text">Login</string>
+    <string name="hostel_image">Hostel</string>
+    <string name="staff_header">Welcome Staff</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_id">Enter ID</string>
+    <string name="enter_dept">Enter Dept</string>
+    <string name="staff_details_header">Staff Details</string>
+    <string name="edit_details_button">Edit Details</string>
+    <string name="student_header">Welcome Student</string>
+    <string name="enter_roll_no">Enter Roll no</string>
+    <string name="enter_year">Enter Year</string>
+    <string name="in_time">In Time</string>
+    <string name="out_time">Out Time</string>
+    <string name="student_details_header">Student Details</string>
 </resources>

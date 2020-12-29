@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class StudentDetails extends AppCompatActivity {
+
     TextView nameT, rollT, deptT, yearT;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

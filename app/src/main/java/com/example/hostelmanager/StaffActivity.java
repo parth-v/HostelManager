@@ -48,7 +48,7 @@ public class StaffActivity extends AppCompatActivity {
         editor.putString(Name, name);
         editor.putString(Roll, roll);
         editor.putString(Dept, dept);
-        editor.commit();
+        editor.apply();
 
         //Display the user feedback on successful submission of details
         String data = "New Staff Added\nName: " + name + "\nID: " + roll + "\nDept: " + dept;
