@@ -23,11 +23,11 @@ public class StudentActivity extends AppCompatActivity {
     public static final String Year = "SnyearK";
     public static final String inTime = "SninTimeK";
     public static final String outTime = "SnoutTimeK";
-    private TimePicker timePicker1, timePicker2;
-    private Calendar calendar1, calendar2;
-    private String format1 = "", format2 = "";
+    private TimePicker timePicker;
+    private Calendar calendar;
+    private String format = "";
     EditText nameT, rollT, deptT, yearT;
-    private TextView time1, time2;
+    private TextView time;
     SharedPreferences sharedpreferences;
 
     @Override
@@ -38,46 +38,40 @@ public class StudentActivity extends AppCompatActivity {
         rollT = (EditText) findViewById(R.id.mainRollNo);
         deptT = (EditText) findViewById(R.id.mainDept);
         yearT = (EditText) findViewById(R.id.mainYear);
-        timePicker1 = (TimePicker) findViewById(R.id.timePicker1);
-        timePicker1 = (TimePicker) findViewById(R.id.timePicker1);
-        calendar1 = Calendar.getInstance();
-        calendar2 = Calendar.getInstance();
-
-        int hour1 = calendar1.get(Calendar.HOUR_OF_DAY);
-        int min1 = calendar1.get(Calendar.MINUTE);
-
-        int hour2 = calendar2.get(Calendar.HOUR_OF_DAY);
-        int min2 = calendar2.get(Calendar.MINUTE);
-
-        //showTime(hour1, min1);
+        timePicker = (TimePicker) findViewById(R.id.timePicker1);
+        time = (TextView) findViewById(R.id.OutHead);
+        calendar = Calendar.getInstance();
 
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        int min = calendar.get(Calendar.MINUTE);
+
+        showTime(hour, min);
+
     }
 
-    public void setTime(View view) {
-        int hour = timePicker1.getCurrentHour();
-        int min = timePicker1.getCurrentMinute();
+    public void setTime() {
+        int hour = timePicker.getCurrentHour();
+        int min = timePicker.getCurrentMinute();
         showTime(hour, min);
     }
 
     public void showTime(int hour, int min) {
         if (hour == 0) {
             hour += 12;
-            format1 = "AM";
+            format = "AM";
         } else if (hour == 12) {
-            format1 = "PM";
+            format = "PM";
         } else if (hour > 12) {
             hour -= 12;
-            format1 = "PM";
+            format = "PM";
         } else {
-            format1 = "AM";
+            format = "AM";
         }
 
-        time1.setText(new StringBuilder().append(hour).append(" : ").append(min)
-                .append(" ").append(format1));
-
-        time2.setText(new StringBuilder().append(hour).append(" : ").append(min)
-                .append(" ").append(format2));
+        time.setText(new StringBuilder().append(hour).append(" : ").append(min)
+                .append(" ").append(format));
     }
 
     public void onSubmit(View view) {
@@ -85,9 +79,8 @@ public class StudentActivity extends AppCompatActivity {
         String roll = rollT.getText().toString();
         String dept = deptT.getText().toString();
         String year = yearT.getText().toString();
-        String inTimeV = time1.getText().toString();
-        String outTimeV = time2.getText().toString();
-
+        setTime();
+        String inTimeV = time.getText().toString();
         if(name.length()==0||roll.length()==0||dept.length()==0||year.length()==0) {
             Toast.makeText(this, "Please provide all the details!", Toast.LENGTH_LONG).show();
             return;
@@ -100,11 +93,10 @@ public class StudentActivity extends AppCompatActivity {
         editor.putString(Dept, dept);
         editor.putString(Year, name);
         editor.putString(inTime, inTimeV);
-        editor.putString(outTime, outTimeV);
         editor.apply();
 
         //Display the user feedback on successful submission of details
-        String data = "New Student Added\nName: " + name + "\nID: " + roll + "\nDept: " + dept +"\nYear: " + year;
+        String data = "New Student Added\nName: " + name + "\nID: " + roll + "\nDept: " + dept +"\nYear: " + year + "\nTime: " + inTimeV;
         Toast.makeText(this, data, Toast.LENGTH_LONG).show();
     }
 

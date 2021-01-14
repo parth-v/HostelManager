@@ -87,27 +87,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:visibility="gone"
             android:layout_margin="20dp"
             android:gravity="center"
-            android:text="@string/out_time"
             android:textColor="@color/design_default_color_primary"
             android:textSize="35sp"
             android:fontFamily="@font/bariol_bold"/>
 
-        <TimePicker
-            android:id="@+id/timePicker2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/purple_200"
-            android:headerBackground="@color/purple_500"
-            android:layout_below="@id/OutHead"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp" />
-
         <Button
             android:id="@+id/submitButton"
             android:layout_width="wrap_content"
-            android:layout_below="@+id/timePicker2"
+            android:layout_below="@+id/OutHead"
             android:layout_centerHorizontal="true"
             android:layout_height="wrap_content"
             android:text="@string/mainSubmit"
