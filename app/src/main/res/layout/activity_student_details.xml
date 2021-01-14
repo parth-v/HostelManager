@@ -85,23 +85,10 @@
         android:textSize="25sp"
         android:fontFamily="@font/bariol_bold"/>
 
-    <TextView
-        android:id="@+id/outTime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/inTime"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="5dp"
-        android:text=""
-        android:gravity="center"
-        android:textColor="@color/design_default_color_primary"
-        android:textSize="25sp"
-        android:fontFamily="@font/bariol_bold"/>
-
     <Button
         android:id="@+id/mainStaffButton"
         android:layout_width="wrap_content"
-        android:layout_below="@+id/outTime"
+        android:layout_below="@+id/inTime"
         android:layout_height="wrap_content"
         android:text="@string/edit_details_button"
         android:padding="15dp"

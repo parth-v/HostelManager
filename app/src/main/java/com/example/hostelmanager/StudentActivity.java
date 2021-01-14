@@ -17,12 +17,11 @@ public class StudentActivity extends AppCompatActivity {
 
     //Shared pref used for storing student details
     public static final String MyPREFERENCES = "MyPrefs" ;
-    public static final String Name = "SnnameK";
-    public static final String Roll = "SnrollK";
-    public static final String Dept = "SndeptK";
-    public static final String Year = "SnyearK";
-    public static final String inTime = "SninTimeK";
-    public static final String outTime = "SnoutTimeK";
+    public static final String Name = "Snname";
+    public static final String Roll = "Snroll";
+    public static final String Dept = "Sndept";
+    public static final String Year = "Snyear";
+    public static final String inTime = "SninTime";
     private TimePicker timePicker;
     private Calendar calendar;
     private String format = "";
@@ -91,7 +90,7 @@ public class StudentActivity extends AppCompatActivity {
         editor.putString(Name, name);
         editor.putString(Roll, roll);
         editor.putString(Dept, dept);
-        editor.putString(Year, name);
+        editor.putString(Year, year);
         editor.putString(inTime, inTimeV);
         editor.apply();
 
