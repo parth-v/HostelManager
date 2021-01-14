@@ -13,9 +13,9 @@ public class StaffActivity extends AppCompatActivity {
 
     //Shared pref used for storing staff name, roll no and dept
     public static final String MyPREFERENCES = "MyPrefs" ;
-    public static final String Name = "SfnameK";
-    public static final String Roll = "SfrollK";
-    public static final String Dept = "SfdeptK";
+    public static final String Name = "Sfname";
+    public static final String Roll = "Sfroll";
+    public static final String Dept = "Sfdept";
     EditText nameT, rollT, deptT;
     SharedPreferences sharedpreferences;
 

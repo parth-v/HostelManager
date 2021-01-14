@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class StaffDetails extends AppCompatActivity {
-
+    SharedPreferences prefs;
     TextView nameT, rollT, deptT;
 
     @Override
@@ -21,6 +21,16 @@ public class StaffDetails extends AppCompatActivity {
         nameT = (TextView) findViewById(R.id.Name);
         rollT = (TextView) findViewById(R.id.RollNo);
         deptT = (TextView) findViewById(R.id.Dept);
+
+        prefs = this.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        String Name = prefs.getString("Sfname", "Faculty 1");
+        String Id = prefs.getString("Sfroll", "1");
+        String Dept = prefs.getString("Sfdept", "CSE");
+
+        nameT.setText(Name);
+        rollT.setText(Id);
+        deptT.setText(Dept);
+
     }
 
     public void EditDetails(View view) {
